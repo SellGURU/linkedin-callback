@@ -1,10 +1,19 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta http-equiv="refresh" content="0; url=https://ava-talk-developapp.vercel.app/#/linkedin/callback" />
-  <title>Redirecting...</title>
-</head>
-<body>
-  <p>Redirecting...</p>
-</body>
+  <head>
+    <title>Redirecting...</title>
+    <script>
+      const queryString = window.location.search;
+      const urlParams = new URLSearchParams(queryString);
+      // Assuming the 'code' is available here (could be from server-side or JavaScript in some cases)
+      var code = urlParams.get('code');  // Replace this with actual code
+
+      // Redirect to the URL with code parameter
+      var redirectUrl = 'https://ava-talk-developapp.vercel.app/#/linkedin/callback?code=' + encodeURIComponent(code);
+      window.location.href = redirectUrl;
+    </script>
+  </head>
+  <body>
+    <p>Redirecting...</p>
+  </body>
 </html>
